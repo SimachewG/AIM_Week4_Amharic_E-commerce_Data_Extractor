@@ -5,7 +5,7 @@ on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Keep this, GitHub-hosted runners use Linux
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
@@ -18,12 +18,9 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m venv .venv
-        source .venv/bin/activate
-        pip install --upgrade pip
+        python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install pytest  # ensure pytest is installed
 
-    - name: Run Tests with Pytest
-      run: |
-        source .venv/bin/activate
-        pytest
+    - name: Run tests
+      run: pytest
