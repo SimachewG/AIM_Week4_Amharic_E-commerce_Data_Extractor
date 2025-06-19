@@ -1,1 +1,4 @@
 /data
+/.env
+/src/__pycache__
+/scraping_session.session
