@@ -49,9 +49,9 @@ input_path = 'data/processed/clean_telegram_data.csv'
 output_path = 'data/processed/final_amharic_preprocessed.csv'
 
 df = pd.read_csv(input_path)
-df['Processed_Message'] = df['Message'].astype(str).apply(preprocess_amharic_message)
+df['Message'] = df['Message'].astype(str).apply(preprocess_amharic_message)
 
-print(df[['Channel Username', 'Message', 'Processed_Message']].head())
+print(df[['Channel Username', 'Message']].head())
 df.to_csv(output_path, index=False, encoding='utf-8')
 print(f"✅ Preprocessed Amharic messages saved to {output_path}")
 
