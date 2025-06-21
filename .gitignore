@@ -1,4 +1,6 @@
-/data
+/data/raw/
+/data/processed/clean_telegram_data.csv
+/data/processed/final_amharic_preprocessed.csv
 /.env
 /src/__pycache__
 /scraping_session.session
