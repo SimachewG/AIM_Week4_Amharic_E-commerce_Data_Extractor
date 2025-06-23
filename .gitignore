@@ -4,3 +4,4 @@
 /.env
 /src/__pycache__
 /scraping_session.session
+/data/processed/model_comparison.csv
