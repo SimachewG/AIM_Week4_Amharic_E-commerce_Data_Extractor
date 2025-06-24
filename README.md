@@ -40,3 +40,37 @@ This script will remove emojis, normalize labialized letters, expand short forms
 
 6. The labeled data is saved in CoNLL format to `data/processed/labeled_data.conll`.
 
+# Task-3:NER Model Fine-Tuning 
+
+1. Fine-tuned `xlm-roberta-base` on Amharic CoNLL-formatted e-commerce data using Hugging Face Transformers.
+2. Tokenized inputs and aligned labels for NER tasks.
+3. Trained using `Trainer` for 4 epochs (batch size: 8, learning rate: 5e-5).
+4. Achieved **F1-score: 1.0** on the test set (perfect classification for `PRODUCT` entity).
+5. Saved the model and tokenizer to `data/processed/ner_amharic_finetuned`.
+6. Verified with sample inference texts like “እቃ ዋጋ 500 ብር ቦሌ”.
+
+# task-4:Model Comparison & Selection
+1. Data Preparation
+2. Tokenization & Label Alignment
+3. Model Fine-Tuning
+4. Fine-tuned 3 multilingual transformer models:
+
+  * 🔹 `xlm-roberta`: `FacebookAI/xlm-roberta-base`
+  * 🔹 `distilbert`: `Davlan/distilbert-base-multilingual-cased-ner-hrl`
+  * 🔹 `mbert`: `bert-base-multilingual-cased`
+5. Used Trainer API with:
+
+  * `epochs = 3`, `batch_size = 8`, `max_len = 128`, `lr = 5e-5`
+
+6. Evaluation & Metric Logging
+
+  * Used `seqeval` to compute F1-score
+  * Collected metrics:
+
+      * Evaluation loss
+      * Evaluation F1-score
+      * Total runtime
+7. Results saved to `model_comparison.csv`
+
+
+
