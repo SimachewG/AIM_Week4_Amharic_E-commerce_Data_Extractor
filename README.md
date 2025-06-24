@@ -72,5 +72,18 @@ This script will remove emojis, normalize labialized letters, expand short forms
       * Total runtime
 7. Results saved to `model_comparison.csv`
 
+# task-5: Model Interpretability
+
+1. Loaded fine-tuned xlm-roberta NER pipeline
+2. Wrapped pipeline for compatibility with LIME and SHAP
+3. Visualized token influence using LimeTextExplainer
+4. Interpreted predictions using SHAP (with fallbacks for system constraints)
+5. Analyzed model errors and uncertain predictions using:
+6. Confidence threshold filtering (score < 0.7)
+7. Generated CSV report with:
+    - Text input
+    - Extracted word
+    - Predicted label
+    - Confidence score
 
 
