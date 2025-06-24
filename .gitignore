@@ -7,5 +7,7 @@
 /data/processed/model_comparison.csv
 /outputs
 /ner_interpretability_report.csv
+/data/ner_amharic_finetuned/
+/data/ner_amharic_model/
 
 
