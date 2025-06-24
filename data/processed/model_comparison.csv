@@ -1,0 +1,4 @@
+model,eval_loss,eval_f1,runtime
+xlm-roberta,0.031051862984895706,1.0,136.09
+distilbert-multilingual,0.0010072952136397362,1.0,45.26
+mbert,0.011888240464031696,1.0,162.07
