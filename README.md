@@ -86,4 +86,14 @@ This script will remove emojis, normalize labialized letters, expand short forms
     - Predicted label
     - Confidence score
 
+# Taks 6: FinTech Vendor Scorecard for Micro-Lending
 
+1. Posting Frequency: Calculates average posts per week for each vendor to measure activity and consistency.
+
+2. Market Reach & Engagement: Computes average views per post and identifies the top-performing post by view count.
+
+3. Business Profile: Extracts average product price from NER-identified product entities.
+
+4. Lending Score: Combines key metrics into a weighted score indicating vendor lending potential.
+
+5. Output: Generates a summary CSV scorecard comparing vendors on key metrics.
